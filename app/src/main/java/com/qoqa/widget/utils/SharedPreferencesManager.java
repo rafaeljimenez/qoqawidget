@@ -45,7 +45,7 @@ public class SharedPreferencesManager {
     /**
      * Récupère la date du dernier "refresh" du Widget
      * @param context Etat courant de l'application
-     * @return La date sous la forme "MM/dd HH:mm"
+     * @return La date sous la forme "dd/MM HH:mm"
      */
     public static String  getLastDateRefreshWidget(Context context) {
 
@@ -54,7 +54,7 @@ public class SharedPreferencesManager {
 
         //Vérifie qu'il existe bien une date
         if(milis ==0)
-            return "-";
+            return null;
 
         //Formatage personnalisé de la date
         String lastDateStr = DateManager.monthDayTimeFormat(new Date(milis));
@@ -99,5 +99,15 @@ public class SharedPreferencesManager {
             Type type = new TypeToken<List<Item>>(){}.getType();
             return new Gson().fromJson(jsonLastOffers,type);
         }
+    }
+
+    /**
+     * Clears everything in the SharedPreferences
+     */
+    public static void clearSharedPrefs(Context context) {
+        SharedPreferences prefs = getSharedPreferences(context);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.clear();
+        editor.commit();
     }
 }

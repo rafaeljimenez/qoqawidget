@@ -8,5 +8,7 @@
     <string name="item_format_string">%1$d\u00B0 in %2$s</string>
     <string name="header_format_string">%1$d\u00B0 in %2$s</string>
 
+    <string name="idee_amelioration">Voici mon idée d\'amélioration de l\'application Qoqa :</string>
+
     <string name="refresh">Actualiser</string>
     </resources>

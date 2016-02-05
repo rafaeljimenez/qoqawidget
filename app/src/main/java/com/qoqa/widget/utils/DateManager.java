@@ -17,7 +17,7 @@ public class DateManager {
      * @return La date formatée en String
      */
     public static String monthDayTimeFormat(Date date){
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd HH:mm");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM HH:mm");
         String dateFormatStr = sdf.format(date);
         return dateFormatStr;
     }

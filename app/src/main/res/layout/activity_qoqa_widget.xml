@@ -13,15 +13,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Voici mon idée d'amélioration de l'application Qoqa :"
-            android:id="@+id/textView" />
+            android:text="@string/idee_amelioration"
+            android:id="@+id/textViewTitle" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="il s'agit d'un widget où l'utilisateur pourra visualiser si il le souhaite, les offres Qoqa de la journée sans ouvrir l'application."
-            android:id="@+id/textView2" />
+            android:id="@+id/textViewContent" />
     </LinearLayout>
 
 
