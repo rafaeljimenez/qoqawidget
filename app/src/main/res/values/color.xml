@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_header">#fff</color>
+    <color name="button_widget_pressed">#F0F0F0</color>
+    <color name="button_widget">#FAFAFA</color>
+</resources>

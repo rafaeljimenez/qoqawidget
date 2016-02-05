@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WidgetQoqa</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="empty_view_text">Les offres Qoqa seront affichées ici ;) \n (Se connecter à internet puis actualiser si rien ne s\'affiche)</string>
+    <string name="toast_format_string">%1$s says Hi!</string>
+    <string name="item_format_string">%1$d\u00B0 in %2$s</string>
+    <string name="header_format_string">%1$d\u00B0 in %2$s</string>
+
+    <string name="refresh">Actualiser</string>
+    </resources>

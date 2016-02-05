@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qoqa.widget" >
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.qoqa.widget.activities.QoqaWidget"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- The widget provider -->
+        <receiver android:name="com.qoqa.widget.views.widgets.WidgetProvider">
+            <intent-filter>
+                <!-- This widget provider receives broadcast with following action name or simply onUpdate of AppWidgetProvider is called -->
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <!-- To receive broadcast with this string name -->
+                <action android:name="com.qoqa.widget.widgetqoqa.DATA_FETCHED" />
+            </intent-filter>
+            <!-- This specifies the widget provider info -->
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/widgetinfo" />
+        </receiver>
+
+        <!-- The service serving the RemoteViews to the collection widget -->
+        <service android:name="com.qoqa.widget.views.widgets.WidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <service android:name="com.qoqa.widget.network.RemoteFetchService" />
+    </application>
+
+</manifest>
