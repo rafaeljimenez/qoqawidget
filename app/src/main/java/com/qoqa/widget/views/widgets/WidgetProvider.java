@@ -19,7 +19,8 @@ import com.qoqa.widget.utils.SharedPreferencesManager;
  * Cette classe nous permet de récupérer les différentes actions à gérer avec le Widget.
  * De la gestion des boutons à la réception des informations du serveur
  *
- * @version 0.1.0
+ * @version 0.1.1
+ * @since 0.1.0
  * @author Rafael Jimenez
  */
 
@@ -194,7 +195,7 @@ public class WidgetProvider extends AppWidgetProvider {
         final int N = appWidgetIds.length;
         for (int i = 0; i < N; i++) {
             RemoteViews layout = updateWidgetListView(context, appWidgetIds[i],isRefreshing);
-            appWidgetManager.updateAppWidget(appWidgetIds, layout);
+            appWidgetManager.updateAppWidget(appWidgetIds[i], layout);
         }
     }
 }
